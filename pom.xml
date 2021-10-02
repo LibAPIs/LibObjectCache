@@ -9,16 +9,16 @@
 	</organization>
 
 	<groupId>com.mclarkdev.tools</groupId>
-	<artifactId>libmetrics</artifactId>
+	<artifactId>libobjectcache</artifactId>
 	<version>PRERELEASE</version>
 	<packaging>jar</packaging>
 
-	<name>libmetrics</name>
-	<url>https://www.mclarkdev.com/tools/libmetrics</url>
-	<description>An generic metrics cache for collecting various system counters.</description>
+	<name>libobjectcache</name>
+	<url>https://www.mclarkdev.com/tools/libobjectcache</url>
+	<description>A generic object cache.</description>
 
 	<scm>
-		<url>https://git.mclarkdev.com/MClarkDev.com--Public/LibMetrics.git</url>
+		<url>https://git.mclarkdev.com/MClarkDev.com--Public/libobjectcache.git</url>
 	</scm>
 
 	<properties>
@@ -61,10 +61,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20160212</version>
-			<scope>compile</scope>
+			<groupId>com.mclarkdev.tools</groupId>
+			<artifactId>libmetrics</artifactId>
+			<version>PRERELEASE</version>
 		</dependency>
 	</dependencies>
 </project>
