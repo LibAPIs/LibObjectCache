@@ -7,6 +7,7 @@ public abstract class LibObjectCacheCachedObject {
 	private final long timeCreated;
 	private long timeTimeout;
 	private long timeTouched;
+	private double touchCount;
 
 	public LibObjectCacheCachedObject() {
 
@@ -14,6 +15,10 @@ public abstract class LibObjectCacheCachedObject {
 
 		this.touch();
 		this.setTimeout(60, TimeUnit.MINUTES);
+	}
+
+	public double getTouchCount() {
+		return this.touchCount;
 	}
 
 	public long getTimeout() {
@@ -37,6 +42,8 @@ public abstract class LibObjectCacheCachedObject {
 	}
 
 	protected void touch() {
+
+		touchCount++;
 		timeTouched = System.currentTimeMillis();
 	}
 
