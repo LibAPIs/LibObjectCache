@@ -6,12 +6,14 @@ jobs:
   Build-Artifacts:
     runs-on: linux-amd64
     steps:
+    - run: set
     - name: Set up JDK
       uses: actions/setup-java@v4
       with:
         distribution: 'adopt'
         java-version: '11'
         server-id: gitea
+        server-password: secrets.DEPLOY_TOKEN
     - name: Checkout application repository
       uses: actions/checkout@v4
       with:
